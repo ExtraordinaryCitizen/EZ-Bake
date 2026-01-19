@@ -15,7 +15,7 @@ Do a big job
 Who's on the team?
 ------------------
 
-.. note::
+.. warning::
 
    Matthew is the best guy.
 
