@@ -25,5 +25,5 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'scrolls'
 html_static_path = ['static']
-html_logo = 'static/EZBakeLogo.png'
+html_logo = 'static/logo.png'
 html_css_files = ['custom.css']
