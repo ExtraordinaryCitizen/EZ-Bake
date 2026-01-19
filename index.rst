@@ -9,7 +9,7 @@ EZ-Bake-Docs documentation
 What is a Capstone Project?
 ---------------------------
 
-Do a big job
+Probably, the best capstone team ever.
 
 
 Who's on the team?
@@ -24,8 +24,15 @@ Who's on the team?
       :align: center
       :height: 200px
 
+Nobody else is on the team.
+
+
+Table Of Contents
+------------------
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+   peltier_analysis
 
