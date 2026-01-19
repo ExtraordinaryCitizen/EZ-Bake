@@ -1,0 +1,17 @@
+/* Custom CSS for EZ-Bake-Docs */
+
+/* Adjust logo size to fit within header height (80px) */
+h1.heading a {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    max-height: 80px;
+    height: 80px;
+}
+
+/* Optionally adjust header height if needed (uncomment to use) */
+/*
+div.header {
+    height: 80px;
+}
+*/
