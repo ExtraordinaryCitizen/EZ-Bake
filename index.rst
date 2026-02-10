@@ -17,7 +17,7 @@ Who's on the team?
 
 .. warning::
 
-   Matthew is the best guy.
+   Matthew is the little guy.
 
    .. image:: static/matthew.png
       :alt: Picture of Matthew
