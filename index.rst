@@ -6,25 +6,13 @@
 EZ-Bake
 =======
 
-What is a Capstone Project?
----------------------------
-
-Probably, the best capstone team ever.
-
-
-Who's on the team?
-------------------
-
-.. warning::
-
-   Matthew is the little guy.
-
-   .. image:: static/matthew.png
-      :alt: Picture of Matthew
-      :align: center
-      :height: 200px
-
-Nobody else is on the team.
+Team Members
+------------
+Team Lead: Matthew Fisher
+Project Engineer: Chas Scott
+Chief Analysis: Matthew MacDonald
+Chief Test Engineer: Jevin Muller
+System Engineer: Sam Norton, Ryan Lopez
 
 
 Table Of Contents
