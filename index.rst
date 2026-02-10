@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-EZ-Bake-Docs documentation
-==========================
+EZ-Bake
+=======
 
 What is a Capstone Project?
 ---------------------------
@@ -35,4 +35,5 @@ Table Of Contents
    :caption: Contents:
 
    peltier_analysis
+   webserial_console
 
