@@ -9,9 +9,13 @@ EZ-Bake
 Team Members
 ------------
 Team Lead: Matthew Fisher
+
 Project Engineer: Chas Scott
+
 Chief Analysis: Matthew MacDonald
+
 Chief Test Engineer: Jevin Muller
+
 System Engineer: Sam Norton, Ryan Lopez
 
 
