@@ -3,28 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-EZ-Bake-Docs documentation
-==========================
+EZ-Bake
+=======
 
-What is a Capstone Project?
----------------------------
+Team Members
+------------
+Team Lead: Matthew Fisher
 
-Probably, the best capstone team ever.
+Project Engineer: Chas Scott
 
+Chief Analysis: Matthew MacDonald
 
-Who's on the team?
-------------------
+Chief Test Engineer: Jevin Muller
 
-.. warning::
-
-   Matthew is the best guy.
-
-   .. image:: static/matthew.png
-      :alt: Picture of Matthew
-      :align: center
-      :height: 200px
-
-Nobody else is on the team.
+System Engineer: Sam Norton, Ryan Lopez
 
 
 Table Of Contents
@@ -35,4 +27,5 @@ Table Of Contents
    :caption: Contents:
 
    peltier_analysis
+   webserial_console
 
