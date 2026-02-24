@@ -28,4 +28,5 @@ Table Of Contents
 
    peltier_analysis
    webserial_console
+   test_page
 
