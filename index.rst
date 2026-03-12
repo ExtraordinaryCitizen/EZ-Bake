@@ -26,6 +26,5 @@ Table Of Contents
    :maxdepth: 2
    :caption: Contents:
 
-   peltier_analysis
    webserial_console
 
