@@ -11,8 +11,8 @@ A prototype! Use the serial-sender below to send and receive commands from the E
     <html>
     <head>
         <title>EZ-Bake GUI</title>
-        <script src="webserial\confirmValue.js"></script>
-        <link rel="stylesheet" href="webserial\style.css">
+        <script src="../webserial/confirmValue.js"></script>
+        <link rel="stylesheet" href="../webserial/style.css">
     </head>
 
 
@@ -66,7 +66,7 @@ A prototype! Use the serial-sender below to send and receive commands from the E
 
     </div>
 
-    <script src="webserial\serialConnect.js"></script>
+    <script src="../webserial/serialConnect.js"></script>
 
     </body>
     </html>
