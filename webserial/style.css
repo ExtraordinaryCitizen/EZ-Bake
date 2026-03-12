@@ -1,0 +1,16 @@
+.top-options {
+    display: flex;
+}
+.top-options div {
+    margin-right: 30px;
+}
+.info-display {
+    display: flex;
+}
+.info-display div {
+    margin-right: 100px;
+}
+.num-input{
+    display: flex;
+    flex-direction: column;
+}
