@@ -1,6 +1,7 @@
 # EZ-Bake Docs
 
-TODO: Fill me out!
+Source code for EZ-Bake website and WebSerial
+https://ez-bake.readthedocs.io/en/latest/
 
 ## Sphinx
 
