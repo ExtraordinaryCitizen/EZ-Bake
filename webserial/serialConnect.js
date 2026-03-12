@@ -1,14 +1,3 @@
-<!-- You need to actually place down some html for the script to interact with, this is like the framework -->
-<!-- In this format too, you'll also need to squeeze some style in or put it all in static/custom.css -->
-<button id="connect">Connect Serial</button>
-<div style="margin-top: 0.5em;">
-<pre id="console" style="background:#1e1e1e;color:#ffffff;padding:0.5em;min-height:8em;max-height:20em;overflow:auto;font-family:monospace;"></pre>
-<input id="input" type="text" placeholder="Type command..." style="width:70%;margin-right:0.25em;">
-<button id="send">Send</button>
-</div>
-
-<!-- This is the script that will interact with the html -->
-<script>
 let port;
 let writer;
 const consoleEl = document.getElementById("console");
@@ -21,18 +10,34 @@ consoleEl.scrollTop = consoleEl.scrollHeight;
 }
 
 // Runs on loop reading serial data
-async function readLoop() {
-const reader = port.readable.getReader();
-const decoder = new TextDecoder();
-try {
-    while (true) {
-        const { value, done } = await reader.read();
-        if (done) break;
-        log(decoder.decode(value));
-    }
-} catch (e) {
-    if (e.name !== "NetworkError") log("\n[Read error: " + e.message + "]");
+// Parses a line, splits on spaces
+function parseLine(line) {
+    const parts = line.trim().split(/\s+/);
+    if (parts.length === 0 || (parts.length === 1 && parts[0] === "")) return;
+    // Example: log the parsed parts; replace with your own handling
+    log(line + " -> [" + parts.join(", ") + "]\n");
 }
+
+// Runs on loop reading serial data
+async function readLoop() {
+    const reader = port.readable.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    try {
+        while (true) {
+            const { value, done } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split(/\r?\n/);
+            buffer = lines.pop() || ""; // keep incomplete line in buffer
+            for (const line of lines) {
+                parseLine(line);
+            }
+        }
+        if (buffer) parseLine(buffer);
+    } catch (e) {
+        if (e.name !== "NetworkError") log("\n[Read error: " + e.message + "]");
+    }
 }
 
 // You can get an element by id, then subscribe to its event: in this case, onclick. Then run the connect logic
@@ -42,6 +47,9 @@ try {
     await port.open({ baudRate: 115200 });
     await port.setSignals({ dataTerminalReady: true }); // Required for hardware Clear To Send
     writer = port.writable.getWriter();
+    setInterval(() => {
+        writer.write(new TextEncoder().encode("Q0\n")).catch(e => log("[Q0 error: " + e.message + "]\n"));
+    }, 1000);
     log("[Connected]\n");
     readLoop();
 } catch (e) {
@@ -65,4 +73,3 @@ try {
 inputEl.addEventListener("keydown", (e) => {
 if (e.key === "Enter") document.getElementById("send").click();
 });
-</script>

@@ -7,7 +7,7 @@ A prototype! Use the serial-sender below to send and receive commands from the E
 
     <!-- You need to actually place down some html for the script to interact with, this is like the framework -->
     <!-- In this format too, you'll also need to squeeze some style in or put it all in static/custom.css -->
-    <button id="connect">Connect Serial</button>
+    <button id="connect">Connect to Serial</button>
     <div style="margin-top: 0.5em;">
         <pre id="console" style="background:#1e1e1e;color:#2d2424;padding:0.5em;min-height:8em;max-height:20em;overflow:auto;font-family:monospace;"></pre>
         <input id="input" type="text" placeholder="Type command..." style="width:70%;margin-right:0.25em;">
