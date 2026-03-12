@@ -9,6 +9,7 @@
 }
 .info-display div {
     margin-right: 100px;
+    border-style: solid;
 }
 .num-input{
     display: flex;
